@@ -19,3 +19,8 @@ bun dev
 ```sh
 npm install @dnd-kit/core @dnd-kit/sortable @dnd-kit/utilities
 ```
+
+
+## 参考
+https://www.tearn.jp/blogs/68874
+
