@@ -17,19 +17,17 @@ const SortableContainer = ({
     id,
   });
   return (
-    <div className="w-[calc(33%-5px)]">
-      <SortableContext id={id} items={items} strategy={rectSortingStrategy}>
-        <div
-          ref={setNodeRef}
-          className="w-64 min-h-full m-4 bg-gray-200 p-5 mt-2 rounded-md shadow-md"
-        >
-          <p className="text-md font-bold text-sky-950">{label}</p>
-          {items.map((id: string) => (
-            <SortableItem key={id} id={id} />
-          ))}
-        </div>
-      </SortableContext>
-    </div>
+    <SortableContext id={id} items={items} strategy={rectSortingStrategy}>
+      <div
+        ref={setNodeRef}
+        className="w-full min-h-full m-6 bg-gray-200 p-5 rounded-md shadow-md"
+      >
+        <p className="text-md font-bold text-sky-950">{label}</p>
+        {items.map((id: string) => (
+          <SortableItem key={id} id={id} />
+        ))}
+      </div>
+    </SortableContext>
   );
 };
 

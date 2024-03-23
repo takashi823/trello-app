@@ -138,37 +138,35 @@ export const Container = () => {
   };
 
   return (
-    <div className="flex flex-row mx-auto">
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCorners}
-        onDragStart={handleDragStart}
-        onDragOver={handleDragOver}
-        onDragEnd={handleDragEnd}
-      >
-        <SortableContainer
-          id="container1"
-          label="TO DO"
-          items={items.container1}
-        />
-        <SortableContainer
-          id="container2"
-          label="IN PROGRESS"
-          items={items.container2}
-        />
-        <SortableContainer
-          id="container3"
-          label="REVIEW"
-          items={items.container3}
-        />
-        <SortableContainer
-          id="container4"
-          label="DONE"
-          items={items.container4}
-        />
+    <DndContext
+      sensors={sensors}
+      collisionDetection={closestCorners}
+      onDragStart={handleDragStart}
+      onDragOver={handleDragOver}
+      onDragEnd={handleDragEnd}
+    >
+      <SortableContainer
+        id="container1"
+        label="TO DO"
+        items={items.container1}
+      />
+      <SortableContainer
+        id="container2"
+        label="IN PROGRESS"
+        items={items.container2}
+      />
+      <SortableContainer
+        id="container3"
+        label="REVIEW"
+        items={items.container3}
+      />
+      <SortableContainer
+        id="container4"
+        label="DONE"
+        items={items.container4}
+      />
 
-        <DragOverlay>{activeId ? <Item id={activeId} /> : null}</DragOverlay>
-      </DndContext>
-    </div>
+      <DragOverlay>{activeId ? <Item id={activeId} /> : null}</DragOverlay>
+    </DndContext>
   );
 };
