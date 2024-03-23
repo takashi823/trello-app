@@ -16,11 +16,19 @@ bun dev
 
 ## 追加したライブラリ
 
+dnd-kit(並べ替え用のライブラリ)
 ```sh
 npm install @dnd-kit/core @dnd-kit/sortable @dnd-kit/utilities
+
+```
+next-auth（認証用のライブラリ）
+```
+npm install next-auth
 ```
 
-
 ## 参考
+- todo参考
 https://www.tearn.jp/blogs/68874
 
+- パスワード認証参考
+https://zenn.dev/tocomi/articles/965c6ccb676a7b
