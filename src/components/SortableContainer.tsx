@@ -20,7 +20,15 @@ const SortableContainer = ({
     <SortableContext id={id} items={items} strategy={rectSortingStrategy}>
       <div
         ref={setNodeRef}
-        className="w-full min-h-full m-6 bg-gray-200 p-5 rounded-md shadow-md"
+        className={`w-full min-h-full m-6 p-5 rounded-md shadow-md ${
+          id === "todo"
+            ? "bg-blue-200"
+            : id === "inProgress"
+            ? "bg-red-200"
+            : id === "prepare"
+            ? "bg-green-200"
+            : "bg-gray-200"
+        }`}
       >
         <p className="text-md font-bold text-sky-950">{label}</p>
         {items.map((id: string) => (
