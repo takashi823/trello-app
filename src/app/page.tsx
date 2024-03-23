@@ -1,7 +1,9 @@
-import Image from "next/image";
+import { Container } from "@/Components/Contaienr";
 
 export default function Home() {
   return (
-    <div>trello todo</div>
-    );
+    <main>
+      <Container />
+    </main>
+  );
 }
